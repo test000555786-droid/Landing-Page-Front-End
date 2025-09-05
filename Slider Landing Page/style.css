@@ -1,0 +1,277 @@
+ *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+ }
+html,body{
+    height:100%;
+    width:100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#main{
+    height:100%;
+    width:100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#navbar{
+    height: 60px;
+    width:100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fnav{
+    display: flex;
+    margin-left: 50px;
+}
+.ball{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+#snav{
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+}
+#snav h2{
+    font-size: 12px;
+    font-weight: 600;
+}
+#snav h2 span{
+    margin: 0px 15px;
+    color: rgb(78, 78, 78);
+}
+
+#navbar2{
+    height: 60px;
+    width: 100%;
+    /* background-color: rgb(28, 82, 129); */
+    display:flex;
+    align-items: center;
+    padding-left:50px ;
+    gap: 60px;
+}
+#navbar2 h2{
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#navbar h4{
+    display: none;
+}
+
+#hero{
+    height: calc(100% - 120px);
+    width: 100%;
+    /* background-color: blueviolet; */
+           
+}
+#text-content{
+    width: 100%;
+    height: 40%;
+    display: flex;   
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+#text-content::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+    width: 8px;
+}
+#text-content::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+.elem{
+    height: 100%;
+    width: 70%;
+    /* background-color: rgb(17, 140, 99);
+    border: 2px solid black; */
+    flex-shrink: 0;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.elem h1{
+    font-size: 130px;
+    font-weight: 500;
+}
+#image{
+    height:60%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+#image::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+    width: 10px;
+    
+}
+#image::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    display: none;
+    
+}
+#image img{
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+#image img:nth-child(2){
+     object-position: left;
+}
+/* ---------------- Responsive Design ---------------- */
+
+/* Tablets (max width 1024px) */
+@media (max-width: 1024px) {
+    #navbar {
+        height: 55px;
+        padding: 0 20px;
+    }
+
+    #fnav {
+        margin-left: 20px;
+    }
+
+    #snav {
+        gap: 30px;
+        margin-right: 20px;
+    }
+
+    #snav h2 {
+        font-size: 11px;
+    }
+
+    #navbar2 {
+        padding-left: 20px;
+        gap: 30px;
+    }
+
+    #navbar2 h2 {
+        font-size: 10px;
+    }
+    
+    #navbar h4 {
+    display: initial;
+}
+
+    .elem {
+        width: 80%;
+    }
+
+    .elem h1 {
+        font-size: 80px;
+    }
+
+    #image img {
+        object-fit: cover;
+    }
+}
+
+/* Mobiles (max width 600px) */
+@media (max-width: 600px) {
+    #navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 20px 30px;
+        gap: 10px;
+        display: flex;
+    }
+
+    #fnav {
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ball{
+    height: 17px;
+    width: 17px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+
+    #snav {
+        
+        margin-right: 0;
+        justify-content: space-between;
+        
+    }
+    #snav h4 {
+    display: initial;
+    
+}
+#snav h4 i{
+    font-size: 20px;
+}
+
+    #snav h2 {
+        font-size: 10px;
+        display: none;
+    }
+
+    #navbar2 {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    #navbar2 h2 {
+        font-size: 9px;
+    }
+      
+
+    #hero {
+        height: 82% ;
+        
+    }
+
+    #text-content {
+        height: 50%;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;   
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+       
+  
+
+    .elem {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+        flex-shrink: 0;
+    }
+
+    .elem h1 {
+        font-size: 60px;
+        text-align: center;
+        line-height: 45px;
+    }
+
+    #image {
+        flex-direction: row;
+        overflow-x: auto;
+        height: auto;
+    }
+
+    #image img {
+        width: 100%;
+        height: auto;
+    }
+}
