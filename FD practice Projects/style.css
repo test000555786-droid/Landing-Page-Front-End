@@ -19,7 +19,7 @@ html,body{
 
 #nav{
     width:100%;
-    height:90px;
+    height:85px;
     /* background-color: rgb(137, 54, 54); */
     display:flex;
     justify-content: end;
@@ -69,10 +69,10 @@ html,body{
     margin-top: 10px;
 }
 #center-in p{
-   font: 20px;
-   padding:20px 0px;
-   line-height: 25px;
-   font-weight: 500;
+   font-size: 17px;
+   padding:10px 0px;
+   line-height: 23px;
+   font-weight: 400;
 }
 
 #right{
@@ -95,7 +95,7 @@ html,body{
 }
 .elem i{
     /* background-color: blue; */
-    font: 20px;
+    font-size: 20px;
     color: black;
     opacity: 0;
 
@@ -108,10 +108,131 @@ html,body{
 }
 
 #bottom{
-    height:32%;
+    height: 32%;
     width:100%;
     background-color: aquamarine;
     background: url(model.jpg);
     background-position: 0% 20%;
     background-size: contain;
+}
+
+
+/*mobile responsive*/
+
+@media (max-width:600px) {
+    
+
+#main{
+   
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav{
+    width:100%;
+    height:70px;
+    /* background-color: rgb(137, 54, 54); */
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    padding: 0 40px;
+
+}
+
+#nav h4{
+   font-size: 10px;
+   font-weight: 600;
+   /* background-color: chartreuse; */
+   padding: 4px;
+}
+#nav h4:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+#nav i{
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: 500;
+}
+
+
+#center{
+    width:100%;
+    /* background-color: rgb(0, 187, 255); */
+    padding: 0px 30px;
+}
+
+#center h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#center-in{
+    height: 30%;
+    width: 100%;
+    /* background-color: rgb(248, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+#center-in p{
+   font-size: 10px;
+   padding:10px 50px 0px 0px;
+   line-height: 15px;
+   font-weight: 500;
+}
+
+#right{
+    
+    width: 40%; 
+    padding: 20px 30px 0px 10px;
+    line-height: 15px;
+}
+
+
+.elem{
+    /* background-color: rgb(0, 0, 255); */
+    padding: 15px 0px;
+    border-top: 2px solid black;
+    display: flex;
+}
+.elem a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    align-items: center;
+}
+.elem i{
+    /* background-color: blue; */
+    font-size: 20px;
+    color: black;
+    opacity: 0;
+
+}
+.elem:hover i{
+    opacity: 1;
+}
+.elem:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+/* #bottom{
+    height:57%;
+    width:100%;
+    background: url(model.jpg);
+    background-position: 0% 20%;
+    background-size: contain;
+} */
+
+#bottom {
+  background-size: cover; /* more natural for hero section */
+  background-position: center; 
+  min-height: 475px; /* safer than % height */
+  background-position: 0% 20%;
+}
 }
